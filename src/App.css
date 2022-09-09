@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+.main{
+  display: grid;
+  grid-template-areas: 
+  "header_h2 header_h2 header_h2 header_h2 header_h2"
+  "left-scroller addresses addresses addresses right-scroller";
+  border: 10px solid gray;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-h2{
+  grid-area: header_h2;
+}
+.main-left-scroller{
+  grid-area: left-scroller;
+}
+.main-right-scroller{
+  grid-area: right-scroller;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.main-content{
+  grid-area: addresses;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 5px solid grey;
+  gap: 3px;
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.address{
+  border: 2px solid gray;
+  color: black;
+  background-color: whitesmoke;
+}
+.address button{
+  background-color: black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.address-name{
+  font-size: large;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
